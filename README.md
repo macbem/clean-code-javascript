@@ -1598,7 +1598,7 @@ As stated previously, JavaScript doesn't have interfaces so the abstractions
 that are depended upon are implicit contracts. That is to say, the methods
 and properties that an object/class exposes to another object/class. In the
 example below, the implicit contract is that any Request module for an
-`InventoryTracker` will have a `requestItems` method.
+`InventoryTracker` will have a `requestItem` method.
 
 **Bad:**
 ```javascript
@@ -1617,7 +1617,7 @@ class InventoryTracker {
     this.items = items;
 
     // BAD: We have created a dependency on a specific request implementation.
-    // We should just have requestItems depend on a request method: `request`
+    // We should just have requestItems depend on a request method: `requestItem`
     this.requester = new InventoryRequester();
   }
 
